@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SignInActivity">
+
+    <ImageView
+        android:id="@+id/topLeftImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_255sdp"
+        android:layout_marginBottom="@dimen/_450sdp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/top_left_signin_iv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/topRightImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_315sdp"
+        android:layout_marginBottom="@dimen/_470sdp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/top_right_signin_iv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/bottomRightImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_215sdp"
+        android:layout_marginTop="@dimen/_530sdp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/bottom_right_signin_iv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/signInTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_140sdp"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:letterSpacing="0.05"
+        android:lineSpacingExtra="@dimen/_8ssp"
+        android:text="@string/sign_in"
+        android:textColor="#292b3a"
+        android:textSize="@dimen/_28ssp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/userNameCardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        app:cardElevation="@dimen/_8sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signInTextView">
+
+        <EditText
+            android:id="@+id/emailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autofillHints="john22@gmail.com"
+            android:background="@color/white"
+            android:drawableStart="@drawable/user"
+            android:drawablePadding="@dimen/_12sdp"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:letterSpacing="0.05"
+            android:lineSpacingExtra="@dimen/_20ssp"
+            android:paddingStart="@dimen/_14sdp"
+            android:paddingTop="@dimen/_11sdp"
+            android:paddingEnd="@dimen/_14sdp"
+            android:paddingBottom="@dimen/_11sdp"
+            android:textColor="#292b3a"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="normal" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/passwordCardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_21sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        app:cardElevation="@dimen/_8sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userNameCardView">
+
+        <EditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autofillHints="john22@gmail.com"
+            android:background="@color/white"
+            android:drawableStart="@drawable/lock"
+            android:drawablePadding="@dimen/_12sdp"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:letterSpacing="0.05"
+            android:lineSpacingExtra="@dimen/_20ssp"
+            android:paddingStart="@dimen/_14sdp"
+            android:paddingTop="@dimen/_11sdp"
+            android:paddingEnd="@dimen/_14sdp"
+            android:paddingBottom="@dimen/_11sdp"
+            android:textColor="#292b3a"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="normal" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/signInCardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_31sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        app:cardElevation="@dimen/_8sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/passwordCardView">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/signInButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/button_yellow_background"
+            android:fontFamily="@font/poppins_medium"
+            android:letterSpacing="0.05"
+            android:lineSpacingExtra="@dimen/_22ssp"
+            android:text="@string/sign_in"
+            android:textColor="#292b3a"
+            android:textSize="@dimen/_11ssp" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/forgetPasswordTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:fontFamily="@font/poppinsregular"
+        android:letterSpacing="0.08"
+        android:lineSpacingExtra="@dimen/_25ssp"
+        android:text="@string/forget_password"
+        android:textColor="#707070"
+        android:textSize="@dimen/_11ssp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signInCardView" />
+
+    <LinearLayout
+        android:id="@+id/signUpLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_40sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/forgetPasswordTextView">
+
+        <TextView
+            android:id="@+id/doNotHavAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsregular"
+            android:letterSpacing="0.08"
+            android:lineSpacingExtra="@dimen/_25ssp"
+            android:text="@string/don_have_an_account"
+            android:textColor="#707070"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="normal"
+            android:layout_marginEnd="@dimen/_4sdp"/>
+
+        <TextView
+            android:id="@+id/signUpTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:letterSpacing="0.05"
+            android:lineSpacingExtra="@dimen/_22ssp"
+            android:text="@string/sign_up"
+            android:textColor="#292b3a"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

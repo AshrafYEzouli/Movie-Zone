@@ -1,4 +1,4 @@
-package com.ashrafyezouli.mvvm;
+package com.movieapp.ashraf;
 
 import org.junit.Test;
 

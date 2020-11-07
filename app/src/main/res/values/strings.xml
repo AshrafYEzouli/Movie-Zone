@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">MVVM</string>
+    <string name="app_name">Movie Zone</string>
+    <string name="tv_shows_most_popular">TV Shows | Most popular</string>
+    <string name="sign_in">Sign In</string>
+    <string name="user_name">User Name</string>
+    <string name="password">Password</string>
+    <string name="forget_password">Forget Password?</string>
+    <string name="don_have_an_account">dont have an account?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="email">Email</string>
 </resources>

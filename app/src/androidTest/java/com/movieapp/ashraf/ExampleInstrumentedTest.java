@@ -1,4 +1,4 @@
-package com.ashrafyezouli.mvvm;
+package com.movieapp.ashraf;
 
 import android.content.Context;
 
