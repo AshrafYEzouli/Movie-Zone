@@ -18,50 +18,82 @@
         android:layout_height="match_parent"
         tools:context=".activity.MainActivity"
         android:animateLayoutChanges="true"
-        android:background="@color/colorPrimaryLight">
+        android:background="@color/white">
 
         <LinearLayout
             android:id="@+id/layoutHeader"
-            android:background="@color/design_default_color_primary"
+            android:background="@drawable/toolbar_background"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             android:layout_width="match_parent"
-            android:layout_height="?actionBarSize"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
             android:padding="@dimen/_8sdp">
 
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/noun_menu_2569521"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_20sdp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:fontFamily="@font/poppins_semi_bold"
+                    android:textStyle="normal"
+                    android:textColor="#292b3a"
+                    android:textSize="@dimen/_25ssp"
+                    android:letterSpacing="0.03"
+                    android:lineSpacingExtra="@dimen/_13ssp"
+                    android:text="@string/movies"
+                    android:layout_centerInParent="true"/>
+
+                <ImageView
+                    android:id="@+id/imageSearch"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:contentDescription="@string/app_name"
+                    android:padding="@dimen/_2sdp"
+                    android:src="@drawable/noun_search_875351"
+                    app:tint="#292b3a"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+
             <TextView
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_8sdp"
-                android:layout_marginEnd="@dimen/_8sdp"
-                android:layout_weight="1"
-                android:ellipsize="end"
-                android:fontFamily="@font/ubuntu_bold"
-                android:textColor="@color/colorTextIcons"
-                android:textSize="@dimen/_14ssp"
-                android:text="@string/tv_shows_most_popular"/>
+                android:fontFamily="@font/poppins_semi_bold"
+                android:textStyle="normal"
+                android:textSize="@dimen/_18ssp"
+                android:textColor="#292b3a"
+                android:letterSpacing="0.03"
+                android:lineSpacingExtra="@dimen/_9sdp"
+                android:text="@string/trending"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_30sdp"
+                android:layout_marginStart="@dimen/_20sdp"/>
 
-            <ImageView
-                android:id="@+id/imageWatchlist"
-                android:layout_width="@dimen/_24sdp"
-                android:layout_height="@dimen/_24sdp"
-                android:layout_marginEnd="@dimen/_8sdp"
-                android:contentDescription="@string/app_name"
-                android:padding="@dimen/_2sdp"
-                android:src="@drawable/ic_watchlist"
-                app:tint="@color/colorTextIcons"/>
-
-            <ImageView
-                android:id="@+id/imageSearch"
-                android:layout_width="@dimen/_24sdp"
-                android:layout_height="@dimen/_24sdp"
-                android:layout_marginEnd="@dimen/_8sdp"
-                android:contentDescription="@string/app_name"
-                android:padding="@dimen/_2sdp"
-                android:src="@drawable/ic_search"
-                app:tint="@color/colorTextIcons"/>
         </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/trendingRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/layoutHeader"
+            app:layout_constraintEnd_toEndOf="@id/layoutHeader"
+            app:layout_constraintTop_toTopOf="@id/layoutHeader"
+            android:layout_marginTop="@dimen/_100sdp"
+            android:layout_marginStart="@dimen/_20sdp" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/tvShowsRecyclerView"
@@ -71,8 +103,9 @@
             android:orientation="vertical"
             android:padding="@dimen/_4sdp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintTop_toBottomOf="@id/layoutHeader"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintTop_toBottomOf="@id/trendingRecyclerView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="@dimen/_12sdp"/>
 
         <ProgressBar
             android:layout_width="@dimen/_25sdp"

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="trendingMovie"
+            type="com.movieapp.ashraf.model.TrendingMovie" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_11sdp"
+        android:layout_marginStart="@dimen/_11sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        app:cardCornerRadius="@dimen/_12sdp"
+        app:cardUseCompatPadding="false">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_12sdp">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/movieImageView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:imageURL="@{trendingMovie.posterPath}"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/movieTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:textStyle="normal"
+                android:textSize="@dimen/_14ssp"
+                android:textColor="#0b0f20"
+                android:letterSpacing="0.02"
+                android:lineSpacingExtra="@dimen/_7ssp"
+                android:text="@{trendingMovie.originalTitle}"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:layout_marginStart="@dimen/_9sdp"
+                android:layout_marginTop="@dimen/_9sdp"
+                android:layout_marginBottom="@dimen/_2sdp"/>
+
+            <TextView
+                android:id="@+id/movieGenresTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:textStyle="normal"
+                android:textSize="@dimen/_10ssp"
+                android:textColor="#0b0f20"
+                android:letterSpacing="0.03"
+                android:lineSpacingExtra="@dimen/_6ssp"
+                android:text="@{trendingMovie.genreIds.toString()}"
+                android:layout_marginStart="@dimen/_9sdp"
+                android:layout_marginBottom="@dimen/_10sdp"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_9sdp"
+                android:layout_marginEnd="@dimen/_9sdp">
+
+                <RelativeLayout
+                    android:id="@+id/movieVoteAverageRelativeLayout"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:background="@drawable/oval"
+                    android:layout_marginEnd="@dimen/_7sdp">
+
+                    <TextView
+                        android:id="@+id/movieVoteAverageTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textStyle="normal"
+                        android:textSize="@dimen/_9ssp"
+                        android:textColor="@color/white"
+                        android:lineSpacingExtra="@dimen/_4ssp"
+                        android:layout_centerInParent="true"
+                        android:text='@{trendingMovie.voteAverage + ""}' />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/movieVoteCountTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:textStyle="normal"
+                    android:textSize="@dimen/_8sdp"
+                    android:textColor="#292b3a"
+                    android:letterSpacing="0.03"
+                    android:lineSpacingExtra="@dimen/_4ssp"
+                    android:text='@{trendingMovie.voteCount + " Review"}'
+                    android:layout_toEndOf="@id/movieVoteAverageRelativeLayout"
+                    android:layout_centerVertical="true"/>
+
+                <ImageView
+                    android:id="@+id/favuorit"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/heart"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="trendingMovie"
+            type="com.movieapp.ashraf.model.TrendingMovie" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_12sdp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/imageTVShow"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:imageURL="@{trendingMovie.posterPath}"
+            app:roundedCornerRadius="@dimen/_12sdp"
+            android:scaleType="fitXY"
+            />
+    </androidx.cardview.widget.CardView>
+</layout>

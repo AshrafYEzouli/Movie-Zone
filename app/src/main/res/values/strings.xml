@@ -8,4 +8,7 @@
     <string name="don_have_an_account">dont have an account?</string>
     <string name="sign_up">Sign Up</string>
     <string name="email">Email</string>
+    <string name="movies">Movies</string>
+    <string name="trending">Trending</string>
+    <string name="todo">TODO</string>
 </resources>

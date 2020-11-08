@@ -1,5 +1,6 @@
 package com.movieapp.ashraf.utility;
 
+import android.net.Uri;
 import android.widget.ImageView;
 
 import com.squareup.picasso.Callback;
@@ -10,7 +11,8 @@ public class BindingAdapter {
     @androidx.databinding.BindingAdapter("android:imageURL")
     public static void setImageURL(ImageView imageView, String URL){
         try{
-            imageView.setAlpha(0f);
+//            Uri imageUri = Uri.parse(URL);
+//            imageView.setImageURI(imageUri);
             Picasso.get().load(URL).noFade().into(imageView, new Callback() {
                 @Override
                 public void onSuccess() {

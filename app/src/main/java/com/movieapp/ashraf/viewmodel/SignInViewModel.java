@@ -7,26 +7,26 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.MutableLiveData;
 
 import com.google.firebase.auth.FirebaseUser;
-import com.movieapp.ashraf.repository.AppRepository;
+import com.movieapp.ashraf.repository.SignInRepository;
 
 public class SignInViewModel extends AndroidViewModel {
 
-    private AppRepository appRepository;
+    private SignInRepository signInRepository;
     private MutableLiveData<FirebaseUser> userMutableLiveData;
 
     public SignInViewModel(@NonNull Application application) {
         super(application);
 
-        appRepository = new AppRepository(application);
-        userMutableLiveData = appRepository.getUserMutableLiveData();
+        signInRepository = new SignInRepository(application);
+        userMutableLiveData = signInRepository.getUserMutableLiveData();
     }
 
     public void register(String email, String password){
-        appRepository.register(email, password);
+        signInRepository.register(email, password);
     }
 
     public void signIn(String email, String password){
-        appRepository.signIn(email, password);
+        signInRepository.signIn(email, password);
     }
 
     public MutableLiveData<FirebaseUser> getUserMutableLiveData() {
